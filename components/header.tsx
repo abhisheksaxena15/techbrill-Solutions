@@ -328,11 +328,22 @@ export default function Header() {
             <NavigationMenuViewport />
           </NavigationMenu>
 
-          <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+          {/* <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
             <Link href="/contact" className="ml-2">
               <Button className="bg-blue-600 hover:bg-blue-700 text-white">Get A Quote</Button>
             </Link>
-          </motion.div>
+          </motion.div> */}
+          <motion.div
+  whileHover={{ scale: 1.05 }}
+  whileTap={{ scale: 0.95 }}
+  className="hidden md:block"
+>
+  <Link href="/contact" className="ml-2">
+    <Button className="bg-blue-600 hover:bg-blue-700 text-white">
+      Get A Quote
+    </Button>
+  </Link>
+</motion.div>
 
           {/* Mobile menu button */}
           <div className="flex items-center md:hidden">

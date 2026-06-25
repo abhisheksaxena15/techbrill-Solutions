@@ -25,9 +25,9 @@ export default function Hero() {
               </p>
 
               <div className="mt-8 flex gap-4">
-                <a
+                <a 
                   href="/contact"
-                  className="inline-flex items-center justify-center rounded-md bg-blue-600 px-6 py-3 text-white font-semibold hover:bg-red-600 hover:dark:bg-red-600 transition"
+                  className="hidden md:block inline-flex items-center justify-center rounded-md bg-blue-600 px-6 py-3 text-white font-semibold hover:bg-red-600 hover:dark:bg-red-600 transition"
                 >
                   Get Started
                 </a><Link
