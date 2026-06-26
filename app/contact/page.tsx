@@ -80,7 +80,7 @@ export default function ContactPage() {
                 <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-2 md:mb-4 leading-tight text-gray-900 dark:text-gray-100">
                   Let&apos;s Connect and Create the Right Solution
                 </h2>
-                <div className="w-20 h-1 bg-primary mb-6"></div>
+                <div className="w-20 h-1 bg-primary mb-6 bg-red-600"></div>
                 <p className="text-gray-700 dark:text-gray-300 mb-8">
                   Have a question or a project in mind? Please share your details below, and our team will get back to you as soon as possible.
                 </p>
@@ -112,7 +112,7 @@ export default function ContactPage() {
                     </label>
                     <Textarea id="message" placeholder="Tell us about your project..." rows={5} required />
                   </div>
-                  <Button type="submit" className="w-full md:w-auto">
+                  <Button type="submit" className="w-full md:w-auto hover:bg-red-600">
                     Send Message
                   </Button>
                 </form>
@@ -177,7 +177,7 @@ export default function ContactPage() {
                 </div>
 
                 <div className="mt-8 w-full">
-                  <h4 className="text-lg font-semibold mb-4">Follow Us</h4>
+                  <h4 className="text-lg font-semibold mb-4 text-red-600">Follow Us</h4>
                   <div className="flex space-x-4">
                     {/* Social icons as before */}
                   </div>

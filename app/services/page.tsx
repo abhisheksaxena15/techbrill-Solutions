@@ -206,7 +206,7 @@ export default function ServicesPage() {
                  transition={{ duration: 0.6, delay: 0.6 }}
                >
                  <Link href="/contact">
-                   <Button size="lg" className="bg-blue-600 text-white rounded-md hover:bg-blue-700 w-full sm:w-auto">Get Started</Button>
+                   <Button size="lg" className="bg-blue-600 text-white rounded-md hover:bg-red-600 w-full sm:w-auto">Get Started</Button>
                  </Link>
                </motion.div>
                                <motion.div
@@ -214,7 +214,7 @@ export default function ServicesPage() {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: 0.8 }}
                 >
-                  <Button size="lg" variant="outline" className="border border-blue-600 text-blue-600 rounded-md font-semibold hover:bg-blue-600 hover:text-white w-full sm:w-auto">View Portfolio</Button>
+                  <Button size="lg" variant="outline" className="border border-blue-600 text-blue-600 rounded-md font-semibold hover:bg-red-600 hover:text-white w-full sm:w-auto">View Portfolio</Button>
                 </motion.div>
             </motion.div>
           </div>
@@ -234,13 +234,13 @@ export default function ServicesPage() {
         <div className="container mx-auto flex flex-col md:flex-row items-center gap-12">
           {/* Left: Text Content */}
           <div className="flex-1 max-w-xl">
-            <span className="text-primary font-semibold uppercase tracking-wide text-xs md:text-sm block mb-2">
+            <span className="text-primary font-semibold uppercase tracking-wide text-xs md:text-sm block mb-2 text-red-600 dark:text-red-600">
               IT Excellence
             </span>
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-2 md:mb-4 leading-tight text-gray-900 dark:text-white">
-              End-to-End IT Services for <span className="text-blue-800">Business Growth</span>
+              End-to-End IT Services for Business Growth
             </h2>
-            <div className="w-20 h-1 bg-primary mb-6"></div>
+            <div className="w-20 h-1 bg-primary mb-6 bg-red-600"></div>
             <p className="mb-8 text-gray-700 text-base dark:text-white">
               At Techbrill, we provide end-to-end IT services that empower businesses to innovate, scale, and succeed in the digital era. Our expertise covers web development, mobile app development, QA & testing, DevOps, cloud solutions, AI & ML, and digital marketing.
             </p>
@@ -249,12 +249,12 @@ export default function ServicesPage() {
             </p>
                          <div className="flex flex-col sm:flex-row gap-4">
                <Link href="#services">
-                 <Button size="lg" className="bg-primary text-white font-semibold px-8 py-3 text-base shadow-md hover:bg-primary/90">
+                 <Button size="lg" className="bg-primary text-white font-semibold px-8 py-3 text-base shadow-md hover:bg-red-600">
                    Explore Services
                  </Button>
                </Link>
                <Link href="/contact">
-                 <Button size="lg" variant="outline" className="bg-white text-primary font-semibold px-8 py-3 text-base border-2 border-primary shadow-md hover:bg-gray-100">
+                 <Button size="lg" variant="outline" className="bg-white text-primary font-semibold px-8 py-3 text-base border-1 border-primary shadow-lg hover:bg-red-600 hover:text-white">
                    Get Consultation
                  </Button>
                </Link>
@@ -275,11 +275,11 @@ export default function ServicesPage() {
         </div>
       </section>
 
-      <section className="py-16 bg-white dark:bg-gray-950">
+      <section className="py-16 bg-white dark:bg-gray-900">
         <div className="container mx-auto px-4 max-w-6xl">
           <div className="text-center mb-12">
             <motion.h2 
-              className="text-lg font-semibold uppercase tracking-wide text-black dark:text-white mb-2"
+              className="text-lg font-semibold uppercase tracking-wide text-black text-red-600 mb-2"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
@@ -292,10 +292,12 @@ export default function ServicesPage() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
             >
-              Assiting your bussiness with robust services and meeting your <span className="text-blue-800 font-bold">Digital Requirements</span>
+              Assiting your bussiness with robust services and meeting
+              <p> your Digital Requirements
+              </p>
             </motion.h2>
             <motion.div 
-              className="h-1 w-20 bg-blue-800 mx-auto mt-4 mb-8"
+              className="h-1 w-20 bg-red-600 mx-auto mt-4 mb-8"
               initial={{ opacity: 0, scaleX: 0 }}
               animate={{ opacity: 1, scaleX: 1 }}
               transition={{ duration: 0.6, delay: 0.4 }}
@@ -330,7 +332,7 @@ export default function ServicesPage() {
                       <div className={`w-10 h-10 rounded-lg ${service.color} flex items-center justify-center shadow-sm`}>
                         <IconComponent className="w-5 h-5" />
                       </div>
-                      <h3 className="text-lg font-bold text-gray-900 dark:text-white group-hover:text-blue-600 transition-colors duration-300">
+                      <h3 className="text-lg font-bold text-gray-900 dark:text-white group-hover:text-red-600 transition-colors duration-300">
                         {service.title}
                       </h3>
                     </div>
@@ -342,7 +344,7 @@ export default function ServicesPage() {
                     {/* Read More Link */}
                     <Link 
                       href={service.link}
-                      className="inline-flex items-center text-blue-600 hover:text-blue-700 font-medium text-sm group/link"
+                      className="inline-flex items-center text-red-600  font-medium text-sm group/link"
                     >
                       <span>Learn more</span>
                       <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover/link:translate-x-1" />
@@ -363,16 +365,20 @@ export default function ServicesPage() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.4, ease: "easeOut" }}
             >
-              <span className="text-blue-700 font-medium uppercase tracking-wide text-xs sm:text-sm block mb-2">
+              <span className="text-red-600 font-medium uppercase tracking-wide text-xs sm:text-sm block mb-2">
                OUR PROVEN PROCESS
               </span>
               <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-2 md:mb-4 text-gray-900 dark:text-white">
-              Creating Business Value with Tailored  <span className="italic text-blue-800 dark:text-blue-200">IT Solutions</span>
+              Creating Business Value with Tailored IT Solutions
               </h2>
-              <div className="w-16 sm:w-20 h-1 bg-blue-700 mx-auto mb-4 sm:mb-6"></div>
+              <div className="w-16 sm:w-20 h-1 bg-red-600 mx-auto mb-4 sm:mb-6"></div>
               <p className="w-full max-w-2xl mx-auto text-sm sm:text-base text-gray-700 dark:text-gray-300">
-                From planning to execution, we follow a streamlined process designed to maximize efficiency, minimize risks, and deliver IT solutions that create real business value and sustainable growth.
+                From planning to execution, we follow a streamlined process designed to maximize efficiency,
               </p>
+              <p className="w-full max-w-2xl mx-auto text-sm sm:text-base text-gray-700 dark:text-gray-300">
+                
+                 minimize risks and deliver IT solutions that create real business value and sustainable growth.
+                 </p>
             </motion.div> 
           </div>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
@@ -415,7 +421,7 @@ export default function ServicesPage() {
 
                              <div className="mt-8">
                  <Link href="/contact">
-                   <Button className="group">
+                   <Button className="group hover:bg-red-600">
                      Get Started <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
                    </Button>
                  </Link>
@@ -432,7 +438,7 @@ export default function ServicesPage() {
                     We specialize in creating tailored solutions to address your unique business challenges.
                   </p>
                                      <Link href="/contact">
-                     <Button variant="outline" className="bg-blue-600 text-white hover:bg-blue-700 dark:bg-blue-700 dark:hover:bg-blue-600 dark:text-white group">
+                     <Button variant="outline" className="bg-blue-600 text-white hover:text-white hover:bg-red-600 dark:bg-blue-700 dark:hover:bg-red-600 dark:text-white group dark:hover:text-white">
                        Contact Our Team 
                      </Button>
                    </Link>
@@ -453,13 +459,13 @@ export default function ServicesPage() {
                animate={{ opacity: 1, y: 0 }}
                transition={{ duration: 0.4, ease: "easeOut" }}
              >
-               <span className="text-blue-700 font-medium uppercase tracking-wide text-xs sm:text-sm block mb-2">
+               <span className="text-red-600 font-medium uppercase tracking-wide text-xs sm:text-sm block mb-2">
                  WHY CHOOSE US
                </span>
                <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-2 md:mb-4 text-gray-900 dark:text-white">
-                 Why Clients <span className="text-blue-800">Trust Us</span> to Drive Innovation
+                 Why Clients Trust Us to Drive Innovation
                </h2>
-               <div className="w-16 sm:w-20 h-1 bg-blue-700 mx-auto mb-4 sm:mb-6"></div>
+               <div className="w-16 sm:w-20 h-1 bg-red-600 mx-auto mb-4 sm:mb-6"></div>
                <p className="w-full max-w-2xl mx-auto text-sm sm:text-base text-gray-700 dark:text-gray-300">
                  We combine innovation, expertise, and commitment to deliver IT services that truly make a difference. Here&apos;s why businesses trust us as their technology partner.
                </p>
