@@ -19,14 +19,14 @@ export default function IndustriesSectionQA() {
     >
       <div className="relative z-10 w-full max-w-none">
         <div className="text-center pt-8 md:pt-12 pb-6 md:pb-8">
-          <h3 className="text-sm font-semibold uppercase tracking-wide text-red-600 dark:text-blue-400">
+          <h3 className="text-sm font-semibold uppercase tracking-wide text-red-600 dark:text-red-600">
             Industry Expertise
           </h3>
           <h2 className="mt-2 text-2xl sm:text-3xl font-bold text-black dark:text-white  md:text-4xl">
             Delivering Tailored Technology Solutions Across Industries
           </h2>
           <div className="h-1 w-20 bg-red-600 mx-auto mt-4 mb-6"></div>
-          <p className="max-w-2xl mx-auto text-gray-600 text-base">
+          <p className="max-w-2xl mx-auto text-gray-600 dark:text-gray-400 text-base">
           From startups to enterprises, we provide industry-focused technology solutions that drive transformation, performance, and measurable results.
           </p>
         </div>
@@ -75,9 +75,9 @@ export default function IndustriesSectionQA() {
           ].map((item, idx) => (
             <div
               key={item.label}
-              className="flex flex-col items-center justify-center min-h-[120px] sm:min-h-[140px] md:min-h-[180px] lg:min-h-[200px] w-full border border-gray-200 transition-all duration-200 cursor-pointer group bg-white hover:bg-blue-900 dark:hover:bg-blue-700 dark:bg-gray-900 dark:border-gray-700 px-2 py-4 sm:px-4 sm:py-6 md:px-6 md:py-8"
+              className="flex flex-col items-center justify-center min-h-[120px] sm:min-h-[140px] md:min-h-[180px] lg:min-h-[200px] w-full border border-gray-200 transition-all duration-200 cursor-pointer group bg-white hover:bg-blue-900 dark:hover:bg-blue-700 dark:bg-gray-800 dark:border-gray-700 px-2 py-4 sm:px-4 sm:py-6 md:px-6 md:py-8"
             >
-              <span className="mb-2 transition-all duration-200 text-blue-900 dark:text-white group-hover:text-white">
+              <span className="mb-2 transition-all duration-200 text-blue-900 dark:text-blue-900 group-hover:text-white">
                 {item.icon}
               </span>
               <span className="font-semibold text-xs sm:text-sm md:text-base lg:text-lg uppercase tracking-wide text-blue-900 group-hover:text-white transition-all duration-200 text-center dark:text-white">

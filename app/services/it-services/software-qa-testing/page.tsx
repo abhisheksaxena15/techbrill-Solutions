@@ -140,7 +140,7 @@ export default function SoftwareQATestingPage() {
               </AnimatedSection>
 
               <div>
-                <h3 className="text-sm font-semibold uppercase tracking-wide text-red-600 dark:text-blue-400">ENSURING EXCELLENCE</h3>
+                <h3 className="text-sm font-semibold uppercase tracking-wide text-red-600 dark:text-red-600">ENSURING EXCELLENCE</h3>
                 <h2 className="mt-2 text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white md:text-4xl">
                   Powering Digital Success Through Quality Assurance
                 </h2>
@@ -162,7 +162,7 @@ export default function SoftwareQATestingPage() {
 
                 <AnimatedSection animation="fade" delay={0.6}>
                   <Link href="/company">
-                    <Button className="group bg-blue-800 hover:bg-red-600 dark:bg-blue-700">
+                    <Button className="group bg-blue-800 hover:bg-red-600 dark:hover:bg-red-600 dark:bg-blue-700">
                       Explore More{" "}
                       <motion.div
                         animate={{ x: [0, 5, 0] }}
@@ -183,11 +183,11 @@ export default function SoftwareQATestingPage() {
 
 
         {/* Advanced Technologies */}
-        <section className="py-16 bg-white dark:bg-gray-950 text-gray-900">
+        <section className="py-16 bg-white dark:bg-gray-900 text-gray-900">
           <div className="container mx-auto px-4">
             {/* Header Section */}
             <div className="text-center mb-12">
-              <h3 className="text-sm font-semibold uppercase tracking-wide text-red-600 dark:text-blue-400">ADVANCED QA SERVICES</h3>
+              <h3 className="text-sm font-semibold uppercase tracking-wide text-red-600 dark:text-red-600">ADVANCED QA SERVICES</h3>
               <h2 className="mt-2 text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white md:text-4xl">
                 Next-Level QA Expertise for Emerging Technologies
               </h2>
@@ -320,7 +320,7 @@ export default function SoftwareQATestingPage() {
           <div className="container mx-auto px-4">
             {/* Header Section */}
             <div className="text-center mb-12">
-              <h3 className="text-sm font-semibold uppercase tracking-wide text-red-600 dark:text-blue-400">SPECIALIZED QA SERVICES</h3>
+              <h3 className="text-sm font-semibold uppercase tracking-wide text-red-600 dark:text-red-600">SPECIALIZED QA SERVICES</h3>
               <h2 className="mt-2 text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white md:text-4xl">
                 Specialized QA Solutions Beyond Standard Testing
               </h2>
@@ -450,7 +450,7 @@ export default function SoftwareQATestingPage() {
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeInUp} className="container mx-auto">
             <h2 className="text-2xl md:text-3xl font-bold mb-4">Ready to Ensure Your Software Quality?</h2>
             <p className="mb-6">Let us help you deliver flawless, high-performing software.</p>
-            <Button size="lg" className="bg-white text-blue-600 font-semibold hover:bg-blue-50">Contact Us</Button>
+            <Button size="lg" className="bg-white text-blue-600 font-semibold hover:bg-red-600 hover:text-white">Contact Us</Button>
           </motion.div>
         </section>
 
@@ -458,7 +458,7 @@ export default function SoftwareQATestingPage() {
         <section className="py-16 pb-24 md:pb-32">
           <div className="container mx-auto">
             <div className="text-center mb-8 md:mb-12">
-              <h3 className="text-lg font-semibold uppercase tracking-wide text-red-600 dark:text-blue-400">
+              <h3 className="text-lg font-semibold uppercase tracking-wide text-red-600 dark:text-red-600">
                 Tools & Technologies
               </h3>
               <h2 className=" text-xl sm:text-3xl font-bold text-gray-900 dark:text-white md:text-4xl">
@@ -487,12 +487,12 @@ export default function SoftwareQATestingPage() {
             >
               <div className="text-center mb-8 md:mb-12">
                 <br />
-                <h3 className="text-sm font-semibold uppercase tracking-wide text-red-600 dark:text-blue-400">HOW WE ENSURE QUALITY</h3>
+                <h3 className="text-sm font-semibold uppercase tracking-wide text-red-600 dark:text-red-600">HOW WE ENSURE QUALITY</h3>
                 <h2 className="mt-2 text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white md:text-4xl">
                 Structured QA Process for Reliable Outcomes
                 </h2>
                 <div className="h-1 w-20 bg-red-600 mx-auto mt-4"></div>
-                <p className="max-w-4xl mx-auto text-gray-600 dark:text-gray-300 text-sm mt-2">
+                <p className="max-w-4xl mx-auto text-gray-600 dark:text-gray-400 text-sm mt-2">
                 Our QA workflow follows a structured, transparent process designed to detect defects early, improve collaboration, and ensure every release meets the highest quality standards.
                 </p>
               </div>
@@ -592,7 +592,7 @@ export default function SoftwareQATestingPage() {
                         <p className="mb-6 max-w-sm mx-auto text-gray-700 dark:text-gray-300">
                           We specialize in creating tailored solutions to address your unique business challenges.
                         </p>
-                        <Button variant="outline" className="bg-blue-600 text-white hover:bg-blue-700 dark:bg-blue-700 dark:hover:bg-blue-600 dark:text-white group">
+                        <Button variant="outline" className="bg-blue-600 text-white hover:bg-red-600 dark:bg-blue-700 dark:hover:bg-red-600 dark:text-white group">
                           <a href="/contact">
                             Contact Our Team
                           </a>
@@ -621,7 +621,7 @@ export default function SoftwareQATestingPage() {
 
 
             <div className="text-center mb-12">
-              <h3 className="text-red-600 dark:text-blue-400 font-medium uppercase tracking-wide text-xs sm:text-sm block mb-2">
+              <h3 className="text-red-600 dark:text-red-600 font-medium uppercase tracking-wide text-xs sm:text-sm block mb-2">
                 Why Choose Us
               </h3>
               <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-2 md:mb-4 text-gray-900 dark:text-white">

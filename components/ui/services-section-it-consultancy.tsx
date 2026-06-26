@@ -141,7 +141,7 @@ export default function ServicesSection() {
     return (
         <>
             {/* 2. What We Do Section - matches the image layout */}
-            <section className="py-16 bg-white dark:bg-gray-950">
+            <section className="py-16 bg-white dark:bg-gray-900">
                 <div className="container mx-auto max-w-6xl">
                     <div className="flex flex-col md:flex-row items-center gap-9">
                         {/* Left: Code image */}
@@ -173,7 +173,7 @@ export default function ServicesSection() {
                             viewport={{ once: true }}
                             transition={{ duration: 0.7 }}
                         >
-                            <h3 className="mb-3 text-sm font-semibold uppercase tracking-wide text-red-600 dark:text-blue-400">
+                            <h3 className="mb-3 text-sm font-semibold uppercase tracking-wide text-red-600 dark:text-red-600">
                                 STRATEGIZE. OPTIMIZE. MODERNIZE
                             </h3>
                             <h2 className="mb-5 text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white md:text-4xl">
@@ -189,7 +189,7 @@ export default function ServicesSection() {
 
                             <AnimatedSection animation="fade" delay={0.6}>
                                 <Link href="/contact">
-                                    <Button className="group bg-blue-800 hover:bg-red-700 dark:bg-blue-700">
+                                    <Button className="group bg-blue-800 hover:bg-red-700 dark:hover:bg-red-700 dark:bg-blue-700">
                                         Consult with us{" "}
                                         <motion.div
                                             animate={{ x: [0, 5, 0] }}
@@ -206,17 +206,17 @@ export default function ServicesSection() {
             </section>
 
             {/* 3. Services Section - Using the custom dark theme from the image */}
-            <section className="py-16 bg-white dark:bg-gray-950">
+            <section className="py-16 bg-white dark:bg-gray-900">
                 <div className="container mx-auto px-4 max-w-6xl">
                     <div className="text-center mb-8 md:mb-12">
-                        <h2 className="text-sm font-semibold uppercase tracking-wide text-red-600 dark:text-blue-400">
+                        <h2 className="text-sm font-semibold uppercase tracking-wide text-red-600 dark:text-red-600">
                             KEY SERVICES
                         </h2>
                         <h2 className="mt-2 text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white md:text-4xl">
                             Driving Transformation Through End-to-End Technology Advisory
                         </h2>
                         <div className="h-1 w-20 bg-red-600 mx-auto mt-4 mb-4"></div>
-                        <h3 className=" text-base text-gray-600 max-w-3xl mx-auto mt-1 leading-relaxed">
+                        <h3 className=" text-base text-gray-600 dark:text-gray-400 max-w-3xl mx-auto mt-1 leading-relaxed">
                             Explore our full spectrum of IT consultancy services designed to transform operations, enhance security, and accelerate business growth.
                         </h3>
                     </div>

@@ -148,10 +148,10 @@ import Autoplay from "embla-carousel-autoplay";
 export default function ServicesSection() {
 	return (
 		<>
-			<section className="py-16 bg-white dark:bg-gray-950">
+			<section className="py-16 bg-white dark:bg-gray-900">
 				<div className="container mx-auto px-4 max-w-6xl">
 					<div className="text-center mb-8 md:mb-12">
-						<h3 className="text-sm font-semibold uppercase tracking-wide text-red-600 dark:text-blue-400">Core QA services</h3>
+						<h3 className="text-sm font-semibold uppercase tracking-wide text-red-600 dark:text-red-600">Core QA services</h3>
 						<h2 className="mt-2 text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white md:text-4xl">Seamless QA Services for Every Development Stage</h2>
 						<div className="h-1 w-20 bg-red-600 mx-auto mt-4"></div>
 						<p className="max-w-3xl mx-auto text-gray-700 dark:text-gray-300 text-base">

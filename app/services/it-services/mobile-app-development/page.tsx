@@ -218,14 +218,21 @@ export default function MobileAppDevelopmentPage() {
                   { label: 'Software Vendors', icon: <svg width="40" height="40" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="10" rx="2" /><path d="M2 17h20" /><path d="M6 17v2" /><path d="M18 17v2" /></svg> },
                   { label: 'Banking & Finance', icon: <svg width="40" height="40" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="10" rx="2" /><path d="M2 17h20" /><path d="M6 17v2" /><path d="M18 17v2" /></svg> },
                   { label: 'Education', icon: <svg width="40" height="40" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" /><path d="M8 12h8" /><path d="M12 8v8" /></svg> },
-                ].map((item) => (
-                  <div
-                    key={item.label}
-                    className="flex flex-col items-center justify-center p-6 rounded-lg bg-white dark: dark:bg-gray-600 shadow-md border border-blue-600 cursor-pointer transition-all duration-300 hover:bg-blue-50 group"
-                  >
-                    <span className="mb-3 text-blue-500 group-hover:text-blue-400 transition-colors duration-300">{item.icon}</span>
-                    <span className="font-extrabold dark:text-gray-950 text-base md:text-lg uppercase tracking-wide text-gray-700 group-hover:text-blue-400 transition-colors duration-300">{item.label}</span>
-                  </div>
+                ].map((item, idx) => (
+            <div
+              key={item.label}
+              className="flex flex-col items-center justify-center min-h-[120px] sm:min-h-[140px] md:min-h-[180px] lg:min-h-[200px] w-full border border-gray-200 transition-all duration-200 cursor-pointer group bg-white hover:bg-blue-900 dark:hover:bg-blue-700 dark:bg-gray-800 dark:border-gray-700 px-2 py-4 sm:px-4 sm:py-6 md:px-6 md:py-8"
+            >
+              <span className="mb-2 transition-all duration-200 text-blue-900 dark:text-blue-900 group-hover:text-white">
+                {item.icon}
+              </span>
+              <span className="font-semibold text-xs sm:text-sm md:text-base lg:text-lg uppercase tracking-wide text-blue-900 group-hover:text-white transition-all duration-200 text-center dark:text-white">
+                {item.label}
+              </span>
+              {/* <span className="text-[10px] sm:text-xs md:text-sm lg:text-base text-gray-600 group-hover:text-white text-center mt-1 px-1 sm:px-2 dark:text-gray-400">
+                {item.desc}
+              </span> */}
+            </div>
                 ))}
               </div>
             </div>
@@ -296,7 +303,7 @@ export default function MobileAppDevelopmentPage() {
                     // boxShadow: '0 6px 32px 0 rgba(59,130,246,0.25), 0 0 14px rgba(239,68,68,0.45)',
                     // borderImage: 'border-rounded-2xl linear-gradient(90deg, #ef4444, #3b82f6) 1',
                   }}
-                    className="
+                  className="
      group
   flex flex-col items-center text-center gap-3
 
