@@ -134,19 +134,22 @@ export default function Header() {
               { icon: <Linkedin className="h-4 w-4" />, href: "https://www.linkedin.com/company/techbrills/", label: "LinkedIn" },
               { icon: <Instagram className="h-4 w-4" />, href: "https://www.instagram.com/techbrills/", label: "Instagram" },
               { icon: <Facebook className="h-4 w-4" />, href: "https://www.facebook.com/techbrillsolutions/", label: "Facebook" },
-              { icon: <Twitter className="h-4 w-4" />, href: "https://x.com/TechbrillS", label: "Twitter" }
-            ].map((social, index) => (
-              <motion.div key={index} whileHover={{ scale: 1.2, rotate: 5 }}>
-                <Link
-                  href={social.href}
-                  className="text-white hover:text-gray-200 transition-colors"
-                  aria-label={social.label}
-                  target="_blank"
-                >
-                  {social.icon}
-                </Link>
-              </motion.div>
-            ))}
+              {
+                icon: <FaXTwitter className="h-4 w-4" />,
+                href: "https://x.com/TechbrillS",
+                label: "X",
+              },].map((social, index) => (
+                <motion.div key={index} whileHover={{ scale: 1.2, rotate: 5 }}>
+                  <Link
+                    href={social.href}
+                    className="text-white hover:text-gray-200 transition-colors"
+                    aria-label={social.label}
+                    target="_blank"
+                  >
+                    {social.icon}
+                  </Link>
+                </motion.div>
+              ))}
             {mounted && (
               <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
                 <div
