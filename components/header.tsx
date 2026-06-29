@@ -135,10 +135,7 @@ export default function Header() {
               { icon: <Instagram className="h-4 w-4" />, href: "https://www.instagram.com/techbrills/", label: "Instagram" },
               { icon: <Facebook className="h-4 w-4" />, href: "https://www.facebook.com/techbrillsolutions/", label: "Facebook" },
               {
-                icon: <FaXTwitter className="h-4 w-4" />,
-                href: "https://x.com/TechbrillS",
-                label: "X",
-              },].map((social, index) => (
+                icon: <FaXTwitter className="h-4 w-4" />, href: "https://x.com/TechbrillS", label: "X"},].map((social, index) => (
                 <motion.div key={index} whileHover={{ scale: 1.2, rotate: 5 }}>
                   <Link
                     href={social.href}
@@ -519,7 +516,7 @@ export default function Header() {
                   { icon: <Linkedin className="h-4 w-4" />, href: "https://www.linkedin.com/company/techbrills/", label: "LinkedIn" },
                   { icon: <Instagram className="h-4 w-4" />, href: "https://www.instagram.com/techbrills/", label: "Instagram" },
                   { icon: <Facebook className="h-4 w-4" />, href: "https://www.facebook.com/techbrillsolutions/", label: "Facebook" },
-                  { icon: <Twitter className="h-4 w-4" />, href: "https://x.com/TechbrillS", label: "Twitter" }
+                  { icon: <FaXTwitter className="h-4 w-4" />, href: "https://x.com/TechbrillS", label: "X" }
                 ].map((social, index) => (
                   <Link
                     key={index}
