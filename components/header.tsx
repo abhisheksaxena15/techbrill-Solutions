@@ -64,6 +64,11 @@ const navItems = [
         category: "Digital Content Solutions",
         href: "/services/digital-content-solutions",
         services: [],
+      },
+      {
+        category: "Training session",
+        href: "/services/training-session",
+        services: [],
       }
     ],
   },
