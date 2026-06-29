@@ -106,7 +106,7 @@
 //     initials: "AM",
 //     name: "Amit Mehta",
 //     role: "Mobile & DevOps Lead",
-//     bio: "10+ apps in production across iOS and Android. Set up Techbrill's entire CI/CD infrastructure from scratch.",
+//     bio: "10+ apps in production across iOS and Android. Set up Techbrill&apos;s entire CI/CD infrastructure from scratch.",
 //     skills: ["Flutter", "Docker", "Kubernetes"],
 //   },
 // ];
@@ -1208,7 +1208,7 @@ export default function MentorshipPage() {
                       marginBottom: "8px",
                     }}
                   >
-                    Today's pairing session
+                    Today&apos;s pairing session
                   </div>
 
                   <h3
@@ -1234,7 +1234,7 @@ export default function MentorshipPage() {
                   }}
                 >
                   <div>$ git checkout -b fix/session-refresh</div>
-                  <div>mentor: let's add a retry boundary here →</div>
+                  <div>mentor: let&apos;s add a retry boundary here →</div>
                   <div>you: got it, writing the test first</div>
                   <div>ci: ✓ 24 tests passed · deploy preview ready</div>
                 </div>
@@ -1346,7 +1346,7 @@ export default function MentorshipPage() {
             <div>
               <div style={{ fontSize: 12, fontWeight: 700, letterSpacing: 1.2, textTransform: "uppercase", color: "var(--color-blue)", marginBottom: 12 }}>Who this is for</div>
               <h2 style={{ fontSize: "clamp(26px,3vw,38px)", fontWeight: 800, color: "var(--color-dark)", lineHeight: 1.2, letterSpacing: -0.5, marginBottom: 16 }}>
-                You don't need more courses.<br />You need a real team.
+                You don&apos;t need more courses.<br />You need a real team.
               </h2>
               <p style={{ fontSize: 16, color: "var(--color-text-muted)", lineHeight: 1.75, marginBottom: 28 }}>
                 Our mentorship model is built around one idea: the fastest way to become a great developer is to work on real problems, get real feedback, and ship things people actually use.
@@ -1375,12 +1375,12 @@ export default function MentorshipPage() {
       {/* ── TRACKS ── */}
       <section style={{ padding: "90px 5%", background: "var(--color-bg-section)" }}>
         <div style={{ maxWidth: 1200, margin: "0 auto" }}>
-          <div style={{ fontSize: 12, fontWeight: 700, letterSpacing: 1.2, textTransform: "uppercase", color: "var(--color-blue)", marginBottom: 12 }}>What you'll work on</div>
+          <div style={{ fontSize: 12, fontWeight: 700, letterSpacing: 1.2, textTransform: "uppercase", color: "var(--color-blue)", marginBottom: 12 }}>What you&apos;ll work on</div>
           <h2 style={{ fontSize: "clamp(26px,3vw,38px)", fontWeight: 800, color: "var(--color-dark)", lineHeight: 1.2, letterSpacing: -0.5, marginBottom: 16 }}>
             Choose your track.<br />Ship something real.
           </h2>
           <p style={{ fontSize: 16, color: "var(--color-text-muted)", maxWidth: 600, lineHeight: 1.75, marginBottom: 56 }}>
-            Each track puts you on an active client project — not a mock exercise. You'll commit code, attend standups, and present to stakeholders.
+            Each track puts you on an active client project — not a mock exercise. You&apos;ll commit code, attend standups, and present to stakeholders.
           </p>
           <div className="tracks-grid" style={{ display: "grid", gridTemplateColumns: "repeat(3,1fr)", gap: 24 }}>
             {tracks.map((t) => (
@@ -1408,7 +1408,7 @@ export default function MentorshipPage() {
             From application to your first commit
           </h2>
           <p style={{ fontSize: 16, color: "var(--color-text-muted)", maxWidth: 600, lineHeight: 1.75, textAlign: "center", margin: "0 auto 64px" }}>
-            No lengthy onboarding. No fake projects. You're contributing to live codebases within the first week.
+            No lengthy onboarding. No fake projects. You&apos;re contributing to live codebases within the first week.
           </p>
           <div className="steps-grid" style={{ display: "grid", gridTemplateColumns: "repeat(4,1fr)", position: "relative" }}>
             <div className="steps-line" style={{ position: "absolute", top: 38, left: "calc(12.5% + 24px)", right: "calc(12.5% + 24px)", borderTop: `2px dashed var(--color-border)`, zIndex: 0 }} />
@@ -1433,10 +1433,10 @@ export default function MentorshipPage() {
         <div style={{ maxWidth: 1200, margin: "0 auto" }}>
           <div style={{ fontSize: 12, fontWeight: 700, letterSpacing: 1.2, textTransform: "uppercase", color: "var(--color-blue)", marginBottom: 12 }}>Your guides</div>
           <h2 style={{ fontSize: "clamp(26px,3vw,38px)", fontWeight: 800, color: "var(--color-white)", lineHeight: 1.2, letterSpacing: -0.5, marginBottom: 16 }}>
-            People who've built it, not just taught it.
+            People who&apos;ve built it, not just taught it.
           </h2>
           <p style={{ fontSize: 16, color: "var(--color-text-light)", maxWidth: 600, lineHeight: 1.75, marginBottom: 56 }}>
-            Every mentor is an active practitioner at Techbrill — working on client projects daily. Their feedback is grounded in what's happening in production right now.
+            Every mentor is an active practitioner at Techbrill — working on client projects daily. Their feedback is grounded in what&apos;s happening in production right now.
           </p>
           <div className="mentor-grid" style={{ display: "grid", gridTemplateColumns: "repeat(3,1fr)", gap: 24 }}>
             {mentors.map((m) => (
@@ -1462,7 +1462,7 @@ export default function MentorshipPage() {
           <div style={{ fontSize: 12, fontWeight: 700, letterSpacing: 1.2, textTransform: "uppercase", color: "var(--color-blue)", marginBottom: 12 }}>What mentees have shipped</div>
           <h2 style={{ fontSize: "clamp(26px,3vw,38px)", fontWeight: 800, color: "var(--color-dark)", lineHeight: 1.2, letterSpacing: -0.5, marginBottom: 16 }}>Real projects. Real impact.</h2>
           <p style={{ fontSize: 16, color: "var(--color-text-muted)", maxWidth: 600, lineHeight: 1.75, marginBottom: 56 }}>
-            These aren't portfolio exercises. They're live products built by mentees — still running, still serving real users today.
+            These aren&apos;t portfolio exercises. They&apos;re live products built by mentees — still running, still serving real users today.
           </p>
           <div className="projects-grid" style={{ display: "grid", gridTemplateColumns: "repeat(2,1fr)", gap: 24 }}>
             {projects.map((p) => (
@@ -1508,7 +1508,7 @@ export default function MentorshipPage() {
       {/* ── TESTIMONIALS ── */}
       <section style={{ padding: "90px 5%" }}>
         <div style={{ maxWidth: 1200, margin: "0 auto" }}>
-          <div style={{ fontSize: 12, fontWeight: 700, letterSpacing: 1.2, textTransform: "uppercase", color: "var(--color-blue)", marginBottom: 12 }}>What they're saying</div>
+          <div style={{ fontSize: 12, fontWeight: 700, letterSpacing: 1.2, textTransform: "uppercase", color: "var(--color-blue)", marginBottom: 12 }}>What they&apos;re saying</div>
           <h2 style={{ fontSize: "clamp(26px,3vw,38px)", fontWeight: 800, color: "var(--color-dark)", lineHeight: 1.2, letterSpacing: -0.5, marginBottom: 16 }}>From the mentees themselves</h2>
           <p style={{ fontSize: 16, color: "var(--color-text-muted)", maxWidth: 600, lineHeight: 1.75, marginBottom: 56 }}>
             No curated quotes from a marketing team. These are from people who went through the program.
@@ -1518,7 +1518,7 @@ export default function MentorshipPage() {
               <div key={t.name} className="testi-card" style={{ background: "var(--color-white)", border: `1px solid var(--color-border)`, borderRadius: 14, padding: 28 }}>
                 <div style={{ color: "var(--color-star)", fontSize: 16, marginBottom: 14, letterSpacing: 2 }}>★★★★★</div>
                 <blockquote style={{ fontSize: 14, color: "var(--color-text-muted)", lineHeight: 1.7, fontStyle: "italic", marginBottom: 20, borderLeft: `3px solid var(--color-blue)`, paddingLeft: 14 }}>
-                  "{t.quote}"
+                  &quot;{t.quote}&quot;
                 </blockquote>
                 <div style={{ display: "flex", alignItems: "center", gap: 12 }}>
                   <div style={{ width: 40, height: 40, borderRadius: "50%", background: "var(--color-blue-light)", color: "var(--color-blue-dark)", fontSize: 14, fontWeight: 700, display: "flex", alignItems: "center", justifyContent: "center" }}>{t.initials}</div>
