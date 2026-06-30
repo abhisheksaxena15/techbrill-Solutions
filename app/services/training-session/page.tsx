@@ -983,24 +983,24 @@ const faqs: FaqItem[] = [
       "The programme has a nominal participation fee that covers mentorship, access to tooling, and project resources. Top performers in each cohort are considered for paid contract roles within Techbrill or with our partner clients.",
   },
   {
-    question: "I'm a complete beginner. Can I still apply?",
+    question: "I&apos;m a complete beginner. Can I still apply?",
     answer:
-      "We don't require professional experience, but you should have some foundational knowledge — completed a basic programming course, built a small project, something to show curiosity. The interview will help us figure out the best track for you.",
+      "We don&apos;t require professional experience, but you should have some foundational knowledge — completed a basic programming course, built a small project, something to show curiosity. The interview will help us figure out the best track for you.",
   },
   {
     question: "How many hours per week does this take?",
     answer:
-      "Plan for 25–35 hours per week. This is a serious commitment, not a side hustle. It's designed to be as close to a real job as possible — standups, deadlines, and all.",
+      "Plan for 25–35 hours per week. This is a serious commitment, not a side hustle. It&apos;s designed to be as close to a real job as possible — standups, deadlines, and all.",
   },
   {
     question: "Is this remote or in-person?",
     answer:
-      "Primarily remote, with optional in-person sessions at our Greater Noida office. All standups and mentor 1:1s are video calls. If you're local, we encourage dropping by occasionally.",
+      "Primarily remote, with optional in-person sessions at our Greater Noida office. All standups and mentor 1:1s are video calls. If you&apos;re local, we encourage dropping by occasionally.",
   },
   {
     question: "Will I get a certificate?",
     answer:
-      "You'll receive a verified completion certificate, but more importantly, you'll have real GitHub commits, shipped product links, and a direct referral from your mentor — which carry far more weight with hiring teams.",
+      "You&apos;ll receive a verified completion certificate, but more importantly, you&apos;ll have real GitHub commits, shipped product links, and a direct referral from your mentor — which carry far more weight with hiring teams.",
   },
 ];
 
