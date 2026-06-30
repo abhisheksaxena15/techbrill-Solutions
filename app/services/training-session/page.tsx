@@ -625,7 +625,6 @@
 //     </div>
 //   );
 // }
-
 "use client";
 
 import { useState } from "react";
@@ -633,7 +632,7 @@ import { useState } from "react";
 // ── Global CSS Variables ──────────────────────────────────────────────────────
 const globalStyles = `
   :root {
-       --color-blue:         #1d4ed8;   /* blue-700 */
+    --color-blue:         #1d4ed8;   /* blue-700 */
     --color-blue-dark:    #1e40af;
     --color-blue-light:   #dbeafe;
     --color-blue-dim:     rgba(29, 78, 216, 0.15);
@@ -642,7 +641,7 @@ const globalStyles = `
     --color-blue-dim-bg:  rgba(29, 78, 216, 0.05);
     --color-blue-chip:    #2563eb;
 
-    --color-dark:            ;
+    --color-dark:            #0f172a;
     --color-dark-surface:    rgba(255, 255, 255, 0.04);
     --color-dark-border:     rgba(255, 255, 255, 0.08);
     --color-dark-divider:    rgba(255, 255, 255, 0.08);
@@ -675,6 +674,18 @@ const globalStyles = `
   body { overflow-x: hidden; }
   a { text-decoration: none; }
 
+  /* ── Hide scrollbar (still scrollable) ── */
+  html, body {
+    scrollbar-width: none;       /* Firefox */
+    -ms-overflow-style: none;    /* IE / old Edge */
+  }
+  html::-webkit-scrollbar,
+  body::-webkit-scrollbar {
+    display: none;               /* Chrome, Safari, new Edge */
+    width: 0;
+    height: 0;
+  }
+
   .track-card { transition: box-shadow 0.25s, transform 0.2s; }
   .track-card:hover { box-shadow: 0 10px 40px rgba(0,0,0,0.08); transform: translateY(-4px); }
   .track-card:hover .track-underline { transform: scaleX(1) !important; }
@@ -699,24 +710,92 @@ const globalStyles = `
 
   .footer-link:hover { color: var(--color-blue) !important; }
 
-  @media (max-width: 960px) {
-    .hero-inner           { grid-template-columns: 1fr !important; }
-    .about-grid           { grid-template-columns: 1fr !important; }
-    .tracks-grid          { grid-template-columns: repeat(2,1fr) !important; }
-    .mentor-grid          { grid-template-columns: repeat(2,1fr) !important; }
-    .testimonials-grid    { grid-template-columns: repeat(2,1fr) !important; }
-    .projects-grid        { grid-template-columns: 1fr !important; }
-    .steps-grid           { grid-template-columns: repeat(2,1fr) !important; gap: 32px !important; }
-    .steps-line           { display: none !important; }
-    .footer-grid          { grid-template-columns: 1fr 1fr !important; }
+  /* ── Responsive: Hero (new layout) ── */
+  .hero-grid-new {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+    gap: 40px;
+    align-items: center;
   }
+  .hero-cta-row { display: flex; gap: 20px; flex-wrap: wrap; margin-bottom: 40px; }
+  .hero-trust-row { display: flex; flex-wrap: wrap; gap: 25px; color: #475569; font-size: 15px; }
+  .hero-visual-wrap { position: relative; width: 100%; max-width: 580px; margin: 0 auto; }
+  .hero-floating-card {
+    position: absolute;
+    left: -15px;
+    bottom: -15px;
+    background: #fff;
+    border-radius: 16px;
+    padding: 16px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+  }
+  .hero-code-box {
+    background: rgba(0,0,0,0.18);
+    border-radius: 14px;
+    padding: 22px;
+    font-family: monospace;
+    font-size: 15px;
+    line-height: 1.9;
+  }
+  .hero-pr-row {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    font-size: 13px;
+  }
+  .hero-browser-header {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 18px 20px;
+  }
+
+  @media (max-width: 1180px) {
+    .hero-grid-new { grid-template-columns: 1fr !important; }
+    .hero-visual-wrap { max-width: 100%; }
+  }
+
+  @media (max-width: 960px) {
+    .hero-inner             { grid-template-columns: 1fr !important; }
+    .about-grid              { grid-template-columns: 1fr !important; }
+    .tracks-grid             { grid-template-columns: repeat(2,1fr) !important; }
+    .mentor-grid             { grid-template-columns: repeat(2,1fr) !important; }
+    .testimonials-grid       { grid-template-columns: repeat(2,1fr) !important; }
+    .projects-grid           { grid-template-columns: 1fr !important; }
+    .steps-grid              { grid-template-columns: repeat(2,1fr) !important; gap: 32px !important; }
+    .steps-line              { display: none !important; }
+    .footer-grid             { grid-template-columns: 1fr 1fr !important; }
+    .hero-floating-card      { position: static !important; margin-top: 16px; }
+  }
+
+  @media (max-width: 768px) {
+    .hero-section            { padding: 60px 5% !important; }
+    .hero-badge-pill         { font-size: 13px !important; padding: 8px 14px !important; }
+    .hero-cta-row a          { flex: 1 1 auto; text-align: center; }
+    .hero-trust-row          { font-size: 13px !important; gap: 14px !important; }
+    .hero-code-box           { font-size: 13px !important; padding: 16px !important; }
+    .hero-pr-row             { font-size: 12px !important; }
+  }
+
   @media (max-width: 640px) {
-    .hero-stats           { grid-template-columns: repeat(2,1fr) !important; }
+    .hero-stats              { grid-template-columns: repeat(2,1fr) !important; }
     .tracks-grid,
     .mentor-grid,
-    .testimonials-grid    { grid-template-columns: 1fr !important; }
-    .nav-links-wrap       { display: none !important; }
-    .footer-grid          { grid-template-columns: 1fr !important; }
+    .testimonials-grid       { grid-template-columns: 1fr !important; }
+    .nav-links-wrap          { display: none !important; }
+    .footer-grid             { grid-template-columns: 1fr !important; }
+    .hero-cta-row             { flex-direction: column !important; }
+    .hero-browser-header span { font-size: 13px !important; }
+  }
+
+  @media (max-width: 420px) {
+    .hero-floating-card div[style*="font-size: 16px"] { font-size: 14px !important; }
   }
 `;
 
@@ -993,10 +1072,9 @@ export default function MentorshipPage() {
     >
       <style>{globalStyles}</style>
 
-
-
       {/* ── HERO ── */}
       <section
+        className="hero-section"
         style={{
           background: "#f8fafc",
           padding: "80px 5%",
@@ -1008,19 +1086,17 @@ export default function MentorshipPage() {
         }}
       >
         <div
+          className="hero-grid-new"
           style={{
             maxWidth: "1200px",
             width: "100%",
             margin: "0 auto",
-            display: "grid",
-            gridTemplateColumns: "repeat(auto-fit,minmax(500px,1fr))",
-            gap: "40px",
-            alignItems: "center",
           }}
         >
           {/* Left Side */}
           <div>
             <div
+              className="hero-badge-pill"
               style={{
                 display: "inline-flex",
                 alignItems: "center",
@@ -1040,7 +1116,7 @@ export default function MentorshipPage() {
 
             <h1
               style={{
-                fontSize: "clamp(36px,4vw,58px)",
+                fontSize: "clamp(32px,7vw,58px)",
                 lineHeight: "1.1",
                 fontWeight: 900,
                 color: "#020617",
@@ -1060,7 +1136,7 @@ export default function MentorshipPage() {
 
             <p
               style={{
-                fontSize: "18px",
+                fontSize: "clamp(15px,2.5vw,18px)",
                 lineHeight: 1.7,
                 color: "#475569",
                 maxWidth: "560px",
@@ -1072,14 +1148,7 @@ export default function MentorshipPage() {
               portfolio teams actually take seriously.
             </p>
 
-            <div
-              style={{
-                display: "flex",
-                gap: "20px",
-                flexWrap: "wrap",
-                marginBottom: "40px",
-              }}
-            >
+            <div className="hero-cta-row">
               <a
                 href="#apply"
                 style={{
@@ -1113,29 +1182,14 @@ export default function MentorshipPage() {
               </a>
             </div>
 
-            <div
-              style={{
-                display: "flex",
-                flexWrap: "wrap",
-                gap: "25px",
-                color: "#475569",
-                fontSize: "15px",
-              }}
-            >
+            <div className="hero-trust-row">
               <span>✓ 1:1 senior mentor</span>
               <span>✓ Live code reviews</span>
               <span>✓ Real project on your GitHub</span>
             </div>
           </div>
 
-          <div
-            style={{
-              position: "relative",
-              width: "100%",
-              maxWidth: "580px",
-              margin: "0 auto",
-            }}
-          >
+          <div className="hero-visual-wrap">
             <div
               style={{
                 background: "#fff",
@@ -1146,14 +1200,7 @@ export default function MentorshipPage() {
               }}
             >
               {/* Browser Header */}
-              <div
-                style={{
-                  display: "flex",
-                  alignItems: "center",
-                  gap: "8px",
-                  padding: "18px 20px",
-                }}
-              >
+              <div className="hero-browser-header">
                 <div
                   style={{
                     width: "12px",
@@ -1213,7 +1260,7 @@ export default function MentorshipPage() {
 
                   <h3
                     style={{
-                      fontSize: "24px",
+                      fontSize: "clamp(18px,3vw,24px)",
                       fontWeight: 700,
                       lineHeight: 1.3,
                     }}
@@ -1223,33 +1270,14 @@ export default function MentorshipPage() {
                 </div>
 
                 {/* Code Box */}
-                <div
-                  style={{
-                    background: "rgba(0,0,0,0.18)",
-                    borderRadius: "14px",
-                    padding: "22px",
-                    fontFamily: "monospace",
-                    fontSize: "15px",
-                    lineHeight: 1.9,
-                  }}
-                >
+                <div className="hero-code-box">
                   <div>$ git checkout -b fix/session-refresh</div>
                   <div>mentor: let&apos;s add a retry boundary here →</div>
                   <div>you: got it, writing the test first</div>
                   <div>ci: ✓ 24 tests passed · deploy preview ready</div>
                 </div>
 
-                <div
-                  style={{
-                    marginTop: "20px",
-                    display: "flex",
-                    justifyContent: "space-between",
-                    alignItems: "center",
-                    flexWrap: "wrap",
-                    gap: "10px",
-                    fontSize: "13px",
-                  }}
-                >
+                <div className="hero-pr-row">
                   <span
                     style={{
                       background: "rgba(255,255,255,0.15)",
@@ -1268,20 +1296,7 @@ export default function MentorshipPage() {
             </div>
 
             {/* Floating Card */}
-            <div
-              style={{
-                position: "absolute",
-                left: "-15px",
-                bottom: "-15px",
-                background: "#fff",
-                borderRadius: "16px",
-                padding: "16px",
-                display: "flex",
-                alignItems: "center",
-                gap: "14px",
-                boxShadow: "0 10px 30px rgba(0,0,0,0.12)",
-              }}
-            >
+            <div className="hero-floating-card">
               <div
                 style={{
                   width: "42px",
@@ -1292,6 +1307,7 @@ export default function MentorshipPage() {
                   placeItems: "center",
                   color: "#2563eb",
                   fontSize: "18px",
+                  flexShrink: 0,
                 }}
               >
                 👥
@@ -1545,11 +1561,6 @@ export default function MentorshipPage() {
           </div>
         </div>
       </section>
-
-      {/* ── FOOTER ── */}
-      
-
     </div>
   );
 }
-
